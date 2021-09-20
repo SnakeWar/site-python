@@ -4,7 +4,19 @@ views = Blueprint(__name__, 'views')
 
 @views.route('/')
 def home():
-    return render_template("index.html", name="Mayrcon", page="Home Page")
+    return render_template("home.html", name="Mayrcon", page="Home Page")
+
+@views.route('/quem-somos')
+def about():
+    return render_template("about.html")
+
+@views.route('/blog')
+def blog():
+    return render_template("blog.html")
+
+@views.route('/fale-conosco')
+def contactus():
+    return render_template("contactus.html")
 
 # @views.route('/profile/<username>')
 # def profile(username):
